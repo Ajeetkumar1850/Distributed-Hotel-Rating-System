@@ -1,0 +1,27 @@
+
+server:
+  port: 8890
+
+#db specific properties
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: microservice
+      
+  application:
+    name: RATING-SERVICE
+ 
+ 
+# No need for updation because mongodb is a noSQL database and dynamic 
+# show-sql will not work with noSQL databases
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9000/eureka
