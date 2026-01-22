@@ -1,17 +1,12 @@
 /.metadata/
 
-# Documentation files (not to be pushed)
-*.md
-README_FIRST.txt
-
-# Scripts
-*.cmd
-*.ps1
-
 # IDE
 .idea/
 *.iml
 .vscode/
+.classpath
+.project
+.settings/
 
 # Maven
 target/
@@ -23,11 +18,25 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
 
 # Logs
 *.log
+logs/
 
 # OS
 .DS_Store
 Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Local environment
+.env
+.env.local
+*.properties.local
+
+# Build output
+build/
+dist/

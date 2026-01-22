@@ -23,9 +23,7 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(err,HttpStatus.BAD_REQUEST);
     }
-
-
-
+ 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorDetails> exceptionHandler(Exception ex, WebRequest request){
 
