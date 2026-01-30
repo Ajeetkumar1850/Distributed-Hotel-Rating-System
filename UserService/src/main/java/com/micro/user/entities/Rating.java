@@ -2,12 +2,16 @@ package com.micro.user.entities;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Rating {
+public class Rating implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String ratingId;
     private String userId;

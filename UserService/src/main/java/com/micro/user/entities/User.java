@@ -9,6 +9,7 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
@@ -17,7 +18,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document("users")
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)

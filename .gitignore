@@ -40,3 +40,19 @@ ehthumbs.db
 # Build output
 build/
 dist/
+
+# Documentation and Guide Files (exclude from git)
+*.md
+*.txt
+*.ps1
+*.cmd
+interview/
+REDIS_SETUP_GUIDE.txt
+REDIS_IMPLEMENTATION_SUMMARY.txt
+ARCHITECTURE_WITH_REDIS.txt
+UPDATED_RESUME_POINTS.txt
+TEST_REDIS_CACHE.ps1
+FUNCTIONALITY_TEST_REPORT.md
+COMPLETE_MONGODB_MIGRATION.md
+PUSH_TO_GITHUB.txt
+PUSH_COMMANDS.cmd
