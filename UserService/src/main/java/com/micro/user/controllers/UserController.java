@@ -32,4 +32,9 @@ public class UserController {
 
         return ResponseEntity.ok(userService.getUser(userId));
     }
+
+    @GetMapping("health")
+    public ResponseEntity<String> health() {
+        return ResponseEntity.ok("User Service is running with Spring Security! 🔒");
+    }
 }
