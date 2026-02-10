@@ -1,0 +1,38 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: AI-SERVICE
+  
+  # Spring AI Vertex AI Gemini Configuration
+  ai:
+    vertex:
+      ai:
+        gemini:
+          project-id: ${GEMINI_PROJECT_ID}  # Your Google Cloud Project ID
+          location: us-central1              # Region
+          api-key: ${GAIzaSyBDA-361SOTfoUIf5HGIhc7S4iQQ79QhAI}        # Gemini API Key (free tier available)
+          chat:
+            options:
+              model: gemini-1.5-flash        # Fast and free model
+              temperature: 0.7               # Creativity level (0-1)
+              max-output-tokens: 500         # Response length limit
+
+# Eureka Client Configuration
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+
+# Logging Configuration
+logging:
+  level:
+    com.micro.ai: DEBUG
+    org.springframework.ai: DEBUG
+    org.springframework.cloud.openfeign: DEBUG

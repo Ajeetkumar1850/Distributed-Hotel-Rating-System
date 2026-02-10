@@ -24,6 +24,11 @@ spring:
           predicates:
             - Path=/micro/ratings/**
 
+        - id: AI-SERVICE
+          uri: lb://AI-SERVICE
+          predicates:
+            - Path=/micro/ai/**
+
 
 eureka:
   instance:
